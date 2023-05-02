@@ -8,29 +8,16 @@
 
 <br>
 
-## :white_check_mark: （共通）ブラウザで情報修正を提案できます
+## :white_check_mark: ブラウザで情報を更新できます（共通）
 
-どこを更新するにせよ **Webブラウザが一番簡単** だと思います...!! 😆
+どこを更新するにせよ**Webブラウザが一番簡単**だと思います...!! 😆
 
-1. 下記の『更新方法』を参考に、修正を提案したい yml ファイルをクリックする
+1. 下記の『oo を更新したい』を参考に、更新したい yml ファイルをクリックする
 2. 画面右にある ✎ アイコン (Fork this project and edit this file) をクリックする
-3. 気になる箇所を修正し、修正内容にタイトルと説明文を付け、Propose file change をクリックする
-4. 修正内容を確認し、問題なければ Create pull request をクリックする
+3. 気になる箇所を更新し、更新内容にタイトルと説明文を付け、Propose file change をクリックする
+4. 更新内容を最終確認し、問題なければ Create pull request をクリックする
 
-以上で完了です。提案された修正内容は運営チームによって再確認され、問題なければ提案された内容が反映されます。もし修正内容に不具合があっても運営側で気付いて修正するので、まずはお気軽に提案してみてください :wink:
-
-<br>
-
-## :bookmark_tabs: メディア掲載を更新したい
-[`_data`](https://github.com/mitou/jr.mitou.org/tree/main/_data) 内の [`media.yml`](https://github.com/mitou/jr.mitou.org/blob/main/_data/media.yml) にメディア掲載記事の情報があります。  
-上が新しい情報になるように記述するとよいでしょう。
-
-それぞれの項目は以下のような内容です。
-```yml
-- title: 記事タイトル (例：「テクノロジー×好きなこと」で“未踏”の領域に挑む10代のトップクリエーターたち (こどもとIT))
-  url: 記事ページのURL (例：https://www.watch.impress.co.jp/kodomo_it/news/1219499.html)
-  date: 公開日 (例：2019/11/20)
-```
+以上で完了です。提案された更新内容は運営チームによって再確認され、問題なければ提案された内容が反映されます。もし更新内容に不具合があっても運営側で気付いて修正するので、まずはお気軽に提案してみてください :wink:
 
 <br>
 
@@ -39,16 +26,18 @@
 
 それぞれの項目は以下のような内容です。
 ```yml
-- id: 他のIDと重複しないID。例: utips
-  title: プロジェクトのタイトル。例：UTIPS - 家事の情報共有サービス
-  description: プロジェクト概要。例：家事のやり方を共有するWEBサービスを...
-  thumbnail: サムネイル画像。まだ無い場合は「tbu.png」を入力
-  youtube: YouTube動画。「?v=xxxx」の "xxxx" 部分。まだ無い場合は「TBD」を入力
-  year: 採択プロジェクトの年度。例: 2018
-  link: 公式サイトへのリンク（任意）。例: https://visi.dev/
+- id: 他のIDと重複しないID。例: visible
+  title: プロジェクトのタイトル。例：Visible ─ Webアクセシビリティー診断 & 修正提案ツール
+  description: プロジェクト概要。例：VisibleはWebサイトのアクセシビリティーを診断するサービスです。...
+  thumbnail: サムネイル画像。まだ無い場合はコメントアウトしてください。
+  promotion: プロジェクトの PV やデモ動画。YouTubeの「?v=xxx」の "xxx" 部分。無い場合はコメントアウト。(Gif にも対応)
+  final: 未踏ジュニア成果報告会の発表動画。YouTubeの「?v=xxx」の "xxx" 部分。無い場合はコメントアウト。
+  final_start: （任意）final の動画再生の開始時刻を指定できます。成果報告会の直後で使います。(例: 123)
+  year: 採択プロジェクトの年度。例: 2020
+  link: 公式サイトへのリンク（任意）。例: https://github.com/visible/visible
   mentor_id: 「mentors.yml」にあるメンターIDを入力。例: yasulab
   creator_ids:
-  - 「cretors.yml」にあるクリエータID。例：mihashi
+  - 「cretors.yml」にあるクリエータID。例：igarashi_ryo
   - 複数名いる場合は、複数記述します
 ```
 
@@ -61,7 +50,7 @@
 ```yml
 - id: クリエータのID。例: mihashi
   project_id: 開発したプロジェクトのID。例: utips
-  mentor_id: 担当メンターのID。例: yasulab`
+  mentor_id: 担当メンターのID。例: yasulab
   name: クリエータの名前。例: 三橋 優希
   is_spc: スーパークリエータ認定について。例：true
   year: 何年度に採択されたプロジェクトか。例: 2018
@@ -78,7 +67,7 @@
   name:
     last: 名字。例：安川
     first: 名前。例: 要平
-  img: `/assets/img/mentors/` に置いたプロフィール画像のファイル名。例: yasulab.png
+  img: /assets/img/mentors/ に置いたプロフィール画像のファイル名。例: yasulab.png
   affiliation: 所属。例：YassLab 株式会社, 一般社団法人 CoderDojo Japan
   interested: こんな提案をお待ちしております。例：スクリプト言語やWebの特長を活かした…（略）
   bio: 略歴。aタグも使えるよ！例：<a href="https://yasslab.jp/">YassLab</a> 代表取締役…（略）
@@ -86,6 +75,19 @@
   twitter: Twitter ID。例：yasulab
   github: GitHub ID。例：yasulab
   web: 上記以外のURL。例: https://yasslab.jp/
+```
+
+<br>
+
+## :bookmark_tabs: メディア掲載を更新したい
+[`_data`](https://github.com/mitou/jr.mitou.org/tree/main/_data) 内の [`media.yml`](https://github.com/mitou/jr.mitou.org/blob/main/_data/media.yml) にメディア掲載記事の情報があります。  
+上が新しい情報になるように記述するとよいでしょう。
+
+それぞれの項目は以下のような内容です。
+```yml
+- title: 記事タイトル (例：「テクノロジー×好きなこと」で“未踏”の領域に挑む10代のトップクリエーターたち (こどもとIT))
+  url: 記事ページのURL (例：https://www.watch.impress.co.jp/kodomo_it/news/1219499.html)
+  date: 公開日 (例：2019/11/20)
 ```
 
 <br>
@@ -106,6 +108,10 @@ $ bundle exec jekyll server
 ```
 
 無事にローカルサーバーが立ち上がったら [http://localhost:4000/](http://localhost:4000/) でアクセスできます。
+
+具体的なデータの流れについては [note 記事](https://note.com/yasslab/n/nf5837dabdf8c)からご確認ください。
+
+[![Mitou Junior on Jekyll](https://github.com/mitou/jr.mitou.org/blob/main/assets/img/mitoujr-on-jekyll.png?raw=true)](https://note.com/yasslab/n/nf5837dabdf8c)
 
 <br>
 
@@ -134,7 +140,15 @@ $ bundle exec rake test
 
 <br>
 
+## :two_hearts: 使用素材など
+
+- [Font Awesome](https://fontawesome.com/license/) - :copyright: Fonticons, Inc.
+- [Twemoji](https://twemoji.twitter.com/) - :copyright: Twitter, Inc and other contributors.
+
+[各プロジェクト](https://jr.mitou.org/projects/)のカバー画像やデモ動画、およびそのソースコードなどは当該プロジェクトのクリエータの著作物となります。
+
+<br>
+
 ## :copyright: クレジット
 
-Copyright &copy; 2016-2021 [Mitou Foundation](https://www.mitou.org/)   
-[未踏ジュニア](https://jr.mitou.org/)運営チーム
+Copyright &copy; [未踏ジュニア](https://jr.mitou.org/)実行委員会
